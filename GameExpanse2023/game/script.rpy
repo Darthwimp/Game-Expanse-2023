@@ -2,38 +2,38 @@
 
 label start:
 
-    $ mcname = renpy.input("What is your name pookie?")
+    $ mcname = renpy.input("What is your name ?")
     $ mcname = mcname.strip()
 
     if mcname == "":
-        narrator "Mehh, ima just call ye Yukki."
+        narrator "Mehh, imma just call you Yuki."
     else:
-        narrator "[mcname], that's a dope af name."
+        narrator "[mcname], hmm... your parents made some questionable decisions"
+        narrator "Anyways"
 
     scene dorm
 
     narrator "You wake up at 6."
-    narrator "and it's another day..."
-    narrator "the same ol'..."
-    narrator "anyway, chop chop, get ready for college"
+    narrator "And it's another day..."
+    narrator "The same ol'..."
+    narrator "Chop chop, get ready for college"
 
     show mc void at left with moveinleft 
 
-    mc "*yawwwwwwnnnnsssss*"
+    mc "*yawwwwwwnnnn*"
     mc "man why do we have to wake up..."
     show mc sad with dissolve
-    mc "I need a coffee :///"
+    mc "I need a coffee :("
     show mc fond side at center with moveinright
     mc "*sips*"
-    mc "it feels good"
     show mc sad with dissolve
-    mc "time to go to college, i guess :/"
+    mc "Time to go to college, i guess :("
 
     show black screen
 
-    narrator "you walk to school"
-    narrator "slowly..."
-    narrator "as the lazy sloth you are."
+    narrator "You walk to college"
+    narrator "Slowly..."
+    narrator "Like the lazy sloth you are."
 
     show classroom
 
