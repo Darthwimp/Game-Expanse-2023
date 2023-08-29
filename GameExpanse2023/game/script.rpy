@@ -1,32 +1,41 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
-
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    $ mcname = renpy.input("What is your name pookie?")
+    $ mcname = mcname.strip()
 
-    scene bg room
+    if mcname == "":
+        narrator "Mehh, ima just call ye Yukki."
+    else:
+        narrator "[mcname], that's a dope af name."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    scene dorm
 
-    show eileen happy
+    narrator "You wake up at 6."
+    narrator "and it's another day..."
+    narrator "the same ol'..."
+    narrator "anyway, chop chop, get ready for college"
 
-    # These display lines of dialogue.
+    show mc void at left with moveinleft 
 
-    e "You've created a new Ren'Py game."
+    mc "*yawwwwwwnnnnsssss*"
+    mc "man why do we have to wake up..."
+    show mc sad with dissolve
+    mc "I need a coffee :///"
+    show mc fond side at center with moveinright
+    mc "*sips*"
+    mc "it feels good"
+    show mc sad with dissolve
+    mc "time to go to college, i guess :/"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show black screen
+
+    narrator "you walk to school"
+    narrator "slowly..."
+    narrator "as the lazy sloth you are."
+
+    show classroom
 
     # This ends the game.
 
