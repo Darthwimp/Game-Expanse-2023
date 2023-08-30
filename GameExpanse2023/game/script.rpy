@@ -141,10 +141,6 @@ label day2:
     mc "*yaaawwwwnn*"
     narrator "And sleep he did..."
 
-    show black screen with pixellate
-
-    
-
     jump dream_sequence
 
 
@@ -167,8 +163,6 @@ label dream_sequence:
     mc "Where am I???"
 
     hide mc normal with dissolve
-
-    hide dream with dissolve
 
     # More dream sequence content here
 
@@ -843,10 +837,13 @@ label sleep:
     jump final_deam
 
 label lady_scene:
+    $ morality = True
     scene road crossing with fade
+
     narrator "When coming back from his date he sees an old lady trying to cross the road"
+    show obachan at center with dissolve
     obachan "Oww!!!!! My back hurts and I can't really see straight"
-    narrator "Looks very young, hmm sussy... "
+    narrator "She looks way too young, hmm did the devs run out of assets... "
     mc "Hmm..."
 
 menu:
@@ -854,10 +851,71 @@ menu:
         narrator "At least you have some sense of morality in you."
         jump final_deam
     "Be on your way.":
+        $ morality = False
         narrator "Oh god you're beyond repair. You don't have your life together anyways and have also lost your sense of morality."
         narrator "It's just downhill from here isn't it. How do you feel about yourself? Do you feel good?"
         narrator "NO point in continuing further."
+        narrator "I'm not letting you play ahead until you make good decisions in life"
         jump lady_scene
 
 label final_deam:
     
+    scene black screen with fade
+
+    narrator "Having helped the old lady"
+    narrator "You're filled with determination"
+    narrator "You go home and go to sleep with a smile on your face"
+
+    scene dream with pixellate
+
+    narrator "How do you feel?"
+    narrator "Do you think you made the right decisions?"
+    narrator "I have been keeping track of you"
+    pause 1.5
+    narrator "So here it is the moment of truth"
+
+    if social>sleep and social>study:
+        narrator "You're a social butterfly"
+        narrator "All the choices you made enhanced your social life"
+        narrator "That's good, very good"
+        narrator "But do not neglect your studies"
+        narrator "And sleep please"
+        pause 1.0
+    elif sleep>social and sleep>study:
+        narrator "You're a dreamy dozer !"
+        narrator "All throughout the game you've prioritized your sleep"
+        narrator "You're healthy, but now what?"
+        narrator "Aren't social skills and your academic important as well?"
+        narrator "How else will Sakura like you (wink wink)"
+        pause 1.0
+    elif study>sleep and study>social:
+        narrator "Oooo ho ho ho"
+        narrator "YOU'RE A KNOWLEDGE KNIGHT"
+        narrator "ALL YOU DID WAS STUDY"
+        narrator "AHAHAHAH..."
+        narrator "...ha ha sorry that's a little funny to me"
+        narrator "Well atleast you're rich"
+        narrator "Live life man, you're in college"
+        pause 1.0
+    else:
+        narrator "WOOOO HOOO YOU'RE AN ALL-ROUNDER"
+        narrator "You just tried out all the choices, didn't you [rlname]?"
+        narrator "Good job! You're well rounded"
+
+    
+    narrator "Well, I may be your narrator but I care about you"
+    narrator "And I want you to be the best version of yourself"
+    narrator "[mcname] is doomed, he's stuck in a game"
+    narrator "but you, [rlname] can achieve big things!"
+    narrator "I, being stuck in this game, can only point out your flaws"
+    narrator "But you have to identify and work on them"
+    narrator "I believe in you..."
+    narrator "Keep going and maybe we'll meet again"
+    pause 1.5
+
+    narrator "Thank you for playing"
+    narrator "With love, the devs."
+
+    return
+
+
