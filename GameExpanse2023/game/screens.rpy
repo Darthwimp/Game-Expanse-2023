@@ -369,9 +369,13 @@ screen main_menu():
             style "main_menu_vbox"
 
             text "[config.name!t]":
+                xalign 0.2
+                yalign 0.5
                 style "main_menu_title"
 
             text "[config.version]":
+                xalign 0
+                yalign 0
                 style "main_menu_version"
 
 
