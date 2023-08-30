@@ -120,7 +120,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 20
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -151,6 +151,7 @@ define config.save_directory = "GameExpanse2023-1693298069"
 ## The icon displayed on the taskbar or dock.
 
 define config.window_icon = "gui/window_icon.png"
+define config.menu_include_disabled = True
 
 
 ## Build configuration #########################################################
